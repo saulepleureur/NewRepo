@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace CommodityLibrary
 {
-    public class Class1
+    public enum UnitType
     {
+        Pieces,
+        Packages,
+        Kilograms,
+        Tons
     }
 }
