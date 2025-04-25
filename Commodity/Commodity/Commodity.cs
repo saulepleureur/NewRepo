@@ -27,7 +27,7 @@ namespace CommodityLibrary
             StockQuantity = stockQuantity;
         }
 
-        public string GetInfo()
+        public virtual string GetInfo()
         {
             return $"Артикул: {Article}\n" +
                    $"Наименование: {Name}\n" +
