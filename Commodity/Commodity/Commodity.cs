@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommodityLibrary
 {
-    public class Commodity
+    public class Commodity : IComparable<Commodity>
     {
         public readonly string Article;
         public string Name { get; set; }
@@ -36,6 +36,12 @@ namespace CommodityLibrary
                    $"Единица измерения: {Unit}\n" +
                    $"Описание: {Description}\n" +
                    $"Наличие на складе: {StockQuantity}";
+        }
+        public int CompareTo(Commodity other)
+        {
+            if (other == null) return 1;
+
+            return string.Compare(this.Article, other.Article, StringComparison.Ordinal);
         }
     }
 }
